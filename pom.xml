@@ -4,14 +4,55 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.7</version>
+        <relativePath/>
+    </parent>
+
     <groupId>org.example</groupId>
     <artifactId>load-testing-sandbox</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>producer-api</module>
+        <module>worker-service</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+<!--        <spring-boot.version>3.5.6</spring-boot.version>-->
+<!--        <spring-kafka.version>3.3.9</spring-kafka.version>-->
+<!--        <jackson-databind.version>2.20.0</jackson-databind.version>-->
     </properties>
 
+<!--    <dependencyManagement>-->
+<!--        <dependencies>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-starter-actuator</artifactId>-->
+<!--                <version>${spring-boot.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.kafka</groupId>-->
+<!--                <artifactId>spring-kafka</artifactId>-->
+<!--                <version>${spring-kafka.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-starter-web</artifactId>-->
+<!--                <version>${spring-boot.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.fasterxml.jackson.core</groupId>-->
+<!--                <artifactId>jackson-databind</artifactId>-->
+<!--                <version>${jackson-databind.version}</version>-->
+<!--            </dependency>-->
+<!--        </dependencies>-->
+<!--    </dependencyManagement>-->
 </project>
